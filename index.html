@@ -870,26 +870,31 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-type">Interactive Web App</div>
-                        <h3 class="project-title">Harry Potter Arithmancy Calculator</h3>
+                        <h3 class="project-title">AI Chat Assistant</h3>
                         <p class="project-description">
-                            A magical-themed calculator inspired by Harry Potter featuring whimsical twinkling star 
-                            animations and mystical color palette. Fully functional with decimal support, error handling, 
-                            and responsive design for all devices.
+                            Full-stack AI chat application integrating Groq API (LLaMA 3.3) with a React frontend and 
+                            Node.js/Express backend, with conversation history persisted in MongoDB. Features REST API 
+                            architecture for real-time AI responses, deployed on Vercel and Render.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-badge">HTML5</span>
-                            <span class="tech-badge">CSS3</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Animations</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">Groq API</span>
+                            <span class="tech-badge">Tailwind CSS</span>
                         </div>
-                        <a href="https://github.com/anubhav2415/Harry-Potter-Themed-Calculator" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 14px; margin-top: 15px; display: inline-block;">View on GitHub →</a>
+                        <div style="display: flex; gap: 15px; margin-top: 15px;">
+                            <a href="https://github.com/anubhav2415/ai-chat-assistant" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 14px;">View on GitHub →</a>
+                            <a href="https://ai-chat-frontend-smoky.vercel.app/" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 14px;">Live Demo →</a>
+                        </div>
                     </div>
                     <div class="project-visual">
                         <div class="code-window">
-                            <div class="code-line"><span class="code-keyword">function</span> <span class="code-function">calculate</span>() {</div>
-                            <div class="code-line">  <span class="code-keyword">const</span> result = <span class="code-function">eval</span>(display);</div>
-                            <div class="code-line">  <span class="code-keyword">return</span> result;</div>
-                            <div class="code-line">}</div>
+                            <div class="code-line"><span class="code-keyword">const</span> <span class="code-function">getAIResponse</span> = <span class="code-keyword">async</span> (message) => {</div>
+                            <div class="code-line">  <span class="code-keyword">const</span> response = <span class="code-keyword">await</span> groq.chat(message);</div>
+                            <div class="code-line">  <span class="code-keyword">return</span> response.choices[0].message;</div>
+                            <div class="code-line">};</div>
                         </div>
                     </div>
                 </div>
